@@ -75,7 +75,7 @@ void Server::ReadClientSocket()
 
     if(!data_stream.commitTransaction())   // Получение данных файла от клиента
     {
-        QString message = QString("Получение данных файла от клиента #%1: %2%").arg(tcp_socket->socketDescriptor()).arg(0);
+        QString message = QString("Получение данных файла от клиента #%1:").arg(tcp_socket->socketDescriptor());
         emit NewMessage(message);
         return;
     }
